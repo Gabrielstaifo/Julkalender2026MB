@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="sv" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Dagens läsning i Julkalender2026MB.">
+  <title>Julkalender2026MB</title>
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/progress.js" defer></script>
+  <script src="js/app.js" defer></script>
+  <script src="js/day.js" defer></script>
+</head>
+<body class="page-day">
+  <a class="skip-link" href="#main" data-i18n="skipToContent">Hoppa till innehållet</a>
+  <div class="sky" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="site-header__brand">
+      <img class="site-header__logo" src="assets/logo.png" alt="" width="72" height="72">
+      <p class="site-header__org">SOUF S:t Jacob</p>
+    </div>
+    <div class="site-header__text">
+      <h1 class="site-header__title">Julkalender2026MB</h1>
+      <p class="site-header__subtitle" data-i18n="subtitle"></p>
+      <p class="header-divider" aria-hidden="true"><span>★</span></p>
+    </div>
+  </header>
+
+  <main id="main">
+    <p id="preview-notice" class="preview-notice" hidden></p>
+
+    <nav id="day-nav" class="day-nav" aria-label="Dagnavigering"></nav>
+    <div id="day-content" class="day-content" aria-live="polite"></div>
+  </main>
+
+  <footer class="site-footer">
+    <p data-i18n="footer"></p>
+  </footer>
+</body>
+</html>

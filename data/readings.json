@@ -1,0 +1,253 @@
+[
+  {
+    "day": 1,
+    "ref_sv": "Psalm 1",
+    "text_sv": "1 Salig är den som inte följer de gudlösas råd, som inte går in på syndares väg och sitter bland föraktare, 2 utan har sin glädje i HERRENS undervisning och begrundar  hans ord både dag och natt. 3 Han är som ett träd, planterat vid vattenbäckar, som bär sin frukt i rätt tid och vars löv inte vissnar. Och allt han gör, det lyckas väl.",
+    "quiz": {
+      "q_sv": "Hur många dagar stannade Herren Jesus på jorden efter sin uppståndelse?",
+      "options": [
+        {
+          "sv": "40 dagar",
+          "correct": true
+        },
+        {
+          "sv": "50 dagar",
+          "correct": false
+        },
+        {
+          "sv": "60 dagar",
+          "correct": false
+        }
+      ],
+      "explain_sv": "Herren Jesus stannade 40 dagar på jorden efter sin uppståndelse, där han visade sig för sina disciple och gav dem instruktioner innan han steg upp till himlen."
+    }
+  },
+  {
+    "day": 2,
+    "ref_sv": "Psalm 12",
+    "text_sv": "4 Sådana är inte de gudlösa, de är som agnar som skingras för vinden. 5 Därför ska inte de gudlösa bestå vid domen, inte syndarna i de rättfärdigas församling. 6 HERREN känner de rättfärdigas väg, men de gudlösas väg leder till fördärvet.",
+    "quiz": {
+      "q_sv": " Hur lång är tidsperioden mellan uppståndelsen & pingstdagen?",
+      "options": [
+        {
+          "sv": "50 dagar",
+          "correct": true
+        },
+        {
+          "sv": "10 dagar",
+          "correct": false
+        },
+        {
+          "sv": "20 dagar",
+          "correct": false
+        }
+      ],
+      "explain_sv": "Tidsperioden mellan uppståndelsen och pingstdagen är 50 dagar, där kristna firar pingstdagen femtio dagar efter påskdagen."
+    }
+  },
+  {
+    "day": 3,
+    "ref_sv": "Psalm 12",
+    "text_sv": "4 Sådana är inte de gudlösa, de är som agnar som skingras för vinden. 5 Därför ska inte de gudlösa bestå vid domen, inte syndarna i de rättfärdigas församling. 6 HERREN känner de rättfärdigas väg, men de gudlösas väg leder till fördärvet.",
+    "quiz": {
+      "q_sv": "Var kallades lärjungarna för första gången kristna?",
+      "options": [
+        {
+          "sv": "Antakia",
+          "correct": true
+        },
+        {
+          "sv": "Jerusalem",
+          "correct": false
+        },
+        {
+          "sv": "Damaskus",
+          "correct": false
+        }
+      ],
+      "explain_sv": "Lärjungarna kallades för första gången kristna i staden Antakia, där människor började att skilja på Jesu följare från andra."
+    }
+  },
+  {
+    "day": 4,
+    "ref_sv": "Psalm 12",
+    "text_sv": "4 Sådana är inte de gudlösa, de är som agnar som skingras för vinden. 5 Därför ska inte de gudlösa bestå vid domen, inte syndarna i de rättfärdigas församling. 6 HERREN känner de rättfärdigas väg, men de gudlösas väg leder till fördärvet.",
+    "quiz": {
+      "q_sv": "Vilken händelse minns kyrkan den första söndagen på den stora fastan?",
+      "options": [
+        {
+          "sv": "Bröllopet i Kana",
+          "correct": true
+        },
+        {
+          "sv": "Den Spetälske",
+          "correct": false
+        },
+        {
+          "sv": "Förlamde mannen",
+          "correct": false
+        }
+      ],
+      "explain_sv": "Lärjungarna kallades för första gången kristna i staden Antakia, där människor började att skilja på Jesu följare från andra."
+    }
+  },
+  {
+    "day": 5,
+    "ref_sv": "Psalm 1",
+    "text_sv": "1 Salig är den som inte följer de gudlösas råd, som inte går in på syndares väg och sitter bland föraktare, 2 utan har sin glädje i HERRENS undervisning och begrundar  hans ord både dag och natt. 3 Han är som ett träd, planterat vid vattenbäckar, som bär sin frukt i rätt tid och vars löv inte vissnar. Och allt han gör, det lyckas väl.",
+    "quiz": {
+      "q_sv": "Hur många dagar stannade Herren Jesus på jorden efter sin uppståndelse?",
+      "options": [
+        {
+          "sv": "40 dagar",
+          "correct": true
+        },
+        {
+          "sv": "50 dagar",
+          "correct": false
+        },
+        {
+          "sv": "60 dagar",
+          "correct": false
+        }
+      ],
+      "explain_sv": "Herren Jesus stannade 40 dagar på jorden efter sin uppståndelse, där han visade sig för sina disciple och gav dem instruktioner innan han steg upp till himlen."
+    }
+  },
+  {
+    "day": 6,
+    "ref_sv": "[MISSING ref_sv — day 6]",
+    "text_sv": "[MISSING text_sv — day 6]"
+  },
+  {
+    "day": 7,
+    "ref_sv": "[MISSING ref_sv — day 7]",
+    "text_sv": "[MISSING text_sv — day 7]"
+  },
+  {
+    "day": 8,
+    "ref_sv": "[MISSING ref_sv — day 8]",
+    "text_sv": "[MISSING text_sv — day 8]"
+  },
+  {
+    "day": 9,
+    "ref_sv": "[MISSING ref_sv — day 9]",
+    "text_sv": "[MISSING text_sv — day 9]"
+  },
+  {
+    "day": 10,
+    "ref_sv": "[MISSING ref_sv — day 10]",
+    "text_sv": "[MISSING text_sv — day 10]"
+  },
+  {
+    "day": 11,
+    "ref_sv": "[MISSING ref_sv — day 11]",
+    "text_sv": "[MISSING text_sv — day 11]"
+  },
+  {
+    "day": 12,
+    "ref_sv": "Psalm 12",
+    "text_sv": "4 Sådana är inte de gudlösa, de är som agnar som skingras för vinden. 5 Därför ska inte de gudlösa bestå vid domen, inte syndarna i de rättfärdigas församling. 6 HERREN känner de rättfärdigas väg, men de gudlösas väg leder till fördärvet.",
+    "quiz": {
+      "q_sv": "[PLACEHOLDER] Fråga om läsningen — dag 12",
+      "options": [
+        {
+          "sv": "[PLACEHOLDER] Rätt alternativ",
+          "correct": true
+        },
+        {
+          "sv": "[PLACEHOLDER] Fel alternativ 1",
+          "correct": false
+        },
+        {
+          "sv": "[PLACEHOLDER] Fel alternativ 2",
+          "correct": false
+        }
+      ],
+      "explain_sv": "[PLACEHOLDER] Kort förklaring på svenska"
+    }
+  },
+  {
+    "day": 13,
+    "ref_sv": "[MISSING ref_sv — day 13]",
+    "text_sv": "[MISSING text_sv — day 13]"
+  },
+  {
+    "day": 14,
+    "ref_sv": "[MISSING ref_sv — day 14]",
+    "text_sv": "[MISSING text_sv — day 14]"
+  },
+  {
+    "day": 15,
+    "ref_sv": "[MISSING ref_sv — day 15]",
+    "text_sv": "[MISSING text_sv — day 15]"
+  },
+  {
+    "day": 16,
+    "ref_sv": "[MISSING ref_sv — day 16]",
+    "text_sv": "[MISSING text_sv — day 16]"
+  },
+  {
+    "day": 17,
+    "ref_sv": "[MISSING ref_sv — day 17]",
+    "text_sv": "[MISSING text_sv — day 17]"
+  },
+  {
+    "day": 18,
+    "ref_sv": "[MISSING ref_sv — day 18]",
+    "text_sv": "[MISSING text_sv — day 18]"
+  },
+  {
+    "day": 19,
+    "ref_sv": "[MISSING ref_sv — day 19]",
+    "text_sv": "[MISSING text_sv — day 19]"
+  },
+  {
+    "day": 20,
+    "ref_sv": "[MISSING ref_sv — day 20]",
+    "text_sv": "[MISSING text_sv — day 20]"
+  },
+  {
+    "day": 21,
+    "ref_sv": "[MISSING ref_sv — day 21]",
+    "text_sv": "[MISSING text_sv — day 21]"
+  },
+  {
+    "day": 22,
+    "ref_sv": "[MISSING ref_sv — day 22]",
+    "text_sv": "[MISSING text_sv — day 22]"
+  },
+  {
+    "day": 23,
+    "ref_sv": "[MISSING ref_sv — day 23]",
+    "text_sv": "[MISSING text_sv — day 23]"
+  },
+  {
+    "day": 24,
+    "ref_sv": "[MISSING ref_sv — day 24]",
+    "text_sv": "[MISSING text_sv — day 24]"
+  },
+  {
+    "day": 25,
+    "ref_sv": "Psalm 25",
+    "text_sv": "1 Varför är hednafolken i uppror? Varför tänker folken tomma tankar? 2 Jordens kungar reser sig och furstarna gaddar ihop sig mot HERREN och hans Smorde:  3 \"Vi sliter sönder deras band och kastar av oss deras rep!\"",
+    "quiz": {
+      "q_sv": "[PLACEHOLDER] Fråga om läsningen — dag 25",
+      "options": [
+        {
+          "sv": "[PLACEHOLDER] Rätt alternativ",
+          "correct": true
+        },
+        {
+          "sv": "[PLACEHOLDER] Fel alternativ 1",
+          "correct": false
+        },
+        {
+          "sv": "[PLACEHOLDER] Fel alternativ 2",
+          "correct": false
+        }
+      ],
+      "explain_sv": "[PLACEHOLDER] Kort förklaring på svenska"
+    }
+  }
+]
