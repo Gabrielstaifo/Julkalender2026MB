@@ -53,7 +53,7 @@
     quizStarFull: 'Hel stjärna – rätt på första försöket',
     quizStarHalf: 'Halv stjärna – rätt efter flera försök',
     quizPlaceholder: 'Platshållare – ersätt med en riktig fråga.',
-    footer: 'Grupp Mor Ignatius & Mor Baselios'
+    footer: 'Grupp Mor Baselios'
   };
 
   // Replace {name} tokens in a UI string.
