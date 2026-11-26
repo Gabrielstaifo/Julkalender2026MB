@@ -19,7 +19,7 @@
     skipToContent: 'Hoppa till innehållet',
     intro: 'En läsning för varje dag i adventet, från 1 till 25 december.',
     introSim: 'En läsning per dag, 1–25 december',
-    subtitle: 'Läsningsschema inför den heliga julfastan · Mor Ignatius gruppen',
+    subtitle: 'Mor Baselios gruppen',
     sayingTitle: 'Visdomsord från kyrkofäderna',
     countdownTitle: 'Nästa lucka öppnas om',
     days: 'dagar',
