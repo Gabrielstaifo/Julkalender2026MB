@@ -9,8 +9,9 @@
   var TOTAL_DAYS = 25;
 
   // Client-only rehearsal: day 1 starts here, or on ?simulate=YYYY-MM-DD.
+  // Default window: 23 Nov–30 Nov 2026 (8 days) for colleague demo.
   var SIMULATION = {
-    start: { year: 2026, month: 11, day: 22 },
+    start: { year: 2026, month: 11, day: 23 },
     days: 8
   };
 
@@ -18,7 +19,7 @@
   var UI = {
     skipToContent: 'Hoppa till innehållet',
     intro: 'En läsning för varje dag i adventet, från 1 till 25 december.',
-    introSim: 'En läsning per dag, 1–25 december',
+    introSim: 'Testversion: en läsning per dag, 23–30 november.',
     subtitle: 'Mor Baselios gruppen',
     sayingTitle: 'Visdomsord från kyrkofäderna',
     countdownTitle: 'Nästa lucka öppnas om',
@@ -34,6 +35,7 @@
     locked: 'Låst',
     previewAll: 'Förhandsvisning: alla dagar',
     previewDay: 'Förhandsvisning: dag {day}',
+    rehearsalNotice: 'Testversion för kollegor: luckorna öppnas 23–30 november.',
     backHome: 'Till startsidan',
     previous: 'Föregående dag',
     next: 'Nästa dag',
@@ -124,7 +126,7 @@
 
   // Tiles show the real calendar date during the rehearsal.
   function displayDay(day) {
-    return rehearsalStart && isRehearsalMode(state.mode) ? simulationDateForDay(day).day : day;
+    return isRehearsalMode(state.mode) ? simulationDateForDay(day).day : day;
   }
 
   // Wall-clock parts of an instant in Stockholm.
@@ -193,10 +195,14 @@
 
   // Rehearsal state follows the real Stockholm date, so it can advance at midnight.
   function computeState(today, previewValue) {
-    var elapsed = rehearsalStart ? simulationDay(today) : null;
+    var elapsed = simulationDay(today);
     var mode = 'real';
-    if (elapsed !== null && elapsed < 1) mode = 'rehearsal-pending';
-    else if (elapsed !== null && elapsed <= SIMULATION.days) mode = 'rehearsal';
+    if (rehearsalStart) {
+      if (elapsed < 1) mode = 'rehearsal-pending';
+      else if (elapsed <= SIMULATION.days) mode = 'rehearsal';
+    } else if (elapsed >= 1 && elapsed <= SIMULATION.days) {
+      mode = 'rehearsal';
+    }
 
     var total = mode === 'real' ? TOTAL_DAYS : SIMULATION.days;
 
@@ -284,10 +290,20 @@
 
   function initPreviewNotice() {
     var notice = document.getElementById('preview-notice');
-    if (!notice || preview === null) return;
-    var key = preview === 'all' ? 'previewAll' : 'previewDay';
-    notice.textContent = t(key, { day: displayDay(preview) });
-    notice.hidden = false;
+    if (!notice) return;
+    if (preview !== null) {
+      var key = preview === 'all' ? 'previewAll' : 'previewDay';
+      notice.textContent = t(key, { day: displayDay(preview) });
+      notice.hidden = false;
+      return;
+    }
+    if (isRehearsalMode(state.mode)) {
+      notice.textContent = t('rehearsalNotice');
+      notice.hidden = false;
+      return;
+    }
+    notice.hidden = true;
+    notice.textContent = '';
   }
 
   // The home card is shown only during the fast, or for an explicit preview day.
