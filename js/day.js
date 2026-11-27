@@ -60,11 +60,25 @@
     nav.replaceChildren(previous, home, next);
   }
 
+  function escapeHtml(text) {
+    return String(text)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
+
+  function renderInlineMarkup(text) {
+    return escapeHtml(text).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+  }
+
   function appendParagraphs(parent, text) {
     String(text).split(/\n\s*\n/).forEach(function (block) {
       var trimmed = block.trim();
       if (!trimmed) return;
-      var paragraph = createElement('p', 'reading__text', trimmed);
+      var paragraph = createElement('p', 'reading__text');
+      paragraph.innerHTML = renderInlineMarkup(trimmed);
       if (isMissing(trimmed)) paragraph.classList.add('is-placeholder');
       parent.appendChild(paragraph);
     });
