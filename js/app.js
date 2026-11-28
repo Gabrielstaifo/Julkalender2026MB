@@ -8,10 +8,9 @@
   var TIME_ZONE = 'Europe/Stockholm';
   var TOTAL_DAYS = 25;
 
-  // Client-only rehearsal: day 1 starts here, or on ?simulate=YYYY-MM-DD.
-  // Default window: 23 Nov–30 Nov 2026 (8 days) for colleague demo.
+  // The public calendar always follows the real 1–25 December dates.
+  // Rehearsals are opt-in only, via ?simulate=YYYY-MM-DD (8-day window).
   var SIMULATION = {
-    start: { year: 2026, month: 11, day: 23 },
     days: 8
   };
 
@@ -110,7 +109,7 @@
   }
 
   function simulationStart() {
-    return rehearsalStart || SIMULATION.start;
+    return rehearsalStart;
   }
 
   function simulationDateForDay(day) {
@@ -209,13 +208,12 @@
     if (qa) {
       return { mode: 'real', total: TOTAL_DAYS, unlockedThrough: TOTAL_DAYS, todayDay: null };
     }
-    var elapsed = simulationDay(today);
+    var elapsed = null;
     var mode = 'real';
     if (rehearsalStart) {
+      elapsed = simulationDay(today);
       if (elapsed < 1) mode = 'rehearsal-pending';
       else if (elapsed <= SIMULATION.days) mode = 'rehearsal';
-    } else if (elapsed >= 1 && elapsed <= SIMULATION.days) {
-      mode = 'rehearsal';
     }
 
     var total = mode === 'real' ? TOTAL_DAYS : SIMULATION.days;
