@@ -34,10 +34,6 @@
     locked: 'Låst',
     previewAll: 'Förhandsvisning: alla dagar',
     previewDay: 'Förhandsvisning: dag {day}',
-    previewQa: 'Förhandsvisning (QA): alla dagar är öppna.',
-    previewIndexTitle: 'Förhandsvisning: alla läsningar',
-    previewIndexIntro: 'Intern QA-sida för att kontrollera alla 25 läsningar. Länkarna öppnar dagarna även innan de är öppna för besökare.',
-    previewMissing: 'saknas',
     rehearsalNotice: 'Testversion för kollegor: luckorna öppnas 23–30 november.',
     backHome: 'Till startsidan',
     previous: 'Föregående dag',
@@ -196,9 +192,11 @@
 
   var preview = readPreview();
 
-  // Hidden QA flag from preview.html: bypass the rehearsal and open all 25 days.
+  // Hidden preview mode: preview.html marks its body, and links carry ?qa=1.
+  // It looks like the live site but opens all 25 days.
   function readQa() {
-    return new URLSearchParams(window.location.search).get('qa') === '1';
+    if (new URLSearchParams(window.location.search).get('qa') === '1') return true;
+    return !!(document.body && document.body.getAttribute('data-preview-all') === '1');
   }
 
   var qa = readQa();
@@ -304,11 +302,6 @@
   function initPreviewNotice() {
     var notice = document.getElementById('preview-notice');
     if (!notice) return;
-    if (qa) {
-      notice.textContent = t('previewQa');
-      notice.hidden = false;
-      return;
-    }
     if (preview !== null) {
       var key = preview === 'all' ? 'previewAll' : 'previewDay';
       notice.textContent = t(key, { day: displayDay(preview) });

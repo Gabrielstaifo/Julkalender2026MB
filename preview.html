@@ -4,16 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="dark">
-  <meta name="description" content="Intern förhandsvisning av alla läsningar.">
   <meta name="robots" content="noindex">
-  <title>Förhandsvisning: alla läsningar</title>
+  <meta name="description" content="Mor Baselios gruppen">
+  <title>Läsningsschema inför den heliga julfastan</title>
   <link rel="icon" type="image/png" href="assets/logo.png">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/progress.js" defer></script>
   <script src="js/app.js" defer></script>
-  <script src="js/preview.js" defer></script>
 </head>
-<body class="page-preview">
+<body class="page-home" data-preview-all="1">
   <a class="skip-link" href="#main" data-i18n="skipToContent">Hoppa till innehållet</a>
   <div class="sky" aria-hidden="true"></div>
 
@@ -32,10 +31,45 @@
   <main id="main">
     <p id="preview-notice" class="preview-notice" hidden></p>
 
-    <section class="card preview-card" aria-labelledby="preview-heading">
-      <h2 id="preview-heading" class="section-title" data-i18n="previewIndexTitle"></h2>
-      <p class="preview-intro" data-i18n="previewIndexIntro"></p>
-      <div id="preview-index" class="preview-index"></div>
+    <section id="saying-card" class="saying-card" aria-labelledby="saying-heading" hidden>
+      <h2 id="saying-heading" class="saying-card__heading" data-i18n="sayingTitle"></h2>
+      <div class="saying-card__body">
+        <blockquote class="saying saying--sv" lang="sv" dir="ltr">
+          <p id="saying-text" class="saying__text"></p>
+        </blockquote>
+      </div>
+    </section>
+
+    <div class="intro">
+      <p data-i18n="intro"></p>
+    </div>
+
+    <section class="countdown" aria-labelledby="countdown-heading">
+      <h2 id="countdown-heading" class="countdown__heading" data-i18n="countdownTitle"></h2>
+      <div id="countdown" class="countdown__timer" role="timer" aria-live="off">
+        <div class="unit">
+          <span id="cd-days" class="unit__value">--</span>
+          <span class="unit__label" data-i18n="days"></span>
+        </div>
+        <div class="unit">
+          <span id="cd-hours" class="unit__value">--</span>
+          <span class="unit__label" data-i18n="hours"></span>
+        </div>
+        <div class="unit">
+          <span id="cd-minutes" class="unit__value">--</span>
+          <span class="unit__label" data-i18n="minutes"></span>
+        </div>
+        <div class="unit">
+          <span id="cd-seconds" class="unit__value">--</span>
+          <span class="unit__label" data-i18n="seconds"></span>
+        </div>
+      </div>
+      <p id="countdown-message" class="countdown__message" aria-live="polite" hidden></p>
+    </section>
+
+    <section class="calendar card" aria-labelledby="calendar-heading">
+      <h2 id="calendar-heading" class="section-title" data-i18n="calendarTitle"></h2>
+      <div id="calendar-grid" class="grid"></div>
     </section>
   </main>
 
