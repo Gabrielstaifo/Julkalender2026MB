@@ -939,6 +939,79 @@ main,
   text-align: center;
 }
 
+/* ---- Hidden QA preview index ---- */
+
+.page-preview main {
+  padding-bottom: 2rem;
+}
+
+.preview-card {
+  padding: 1rem;
+}
+
+.preview-intro {
+  margin: 0 0 1rem;
+  color: var(--soft-gold);
+}
+
+.preview-index {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem;
+}
+
+.preview-index__item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  min-width: 0;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--border-gold);
+  border-radius: 10px;
+  background: linear-gradient(160deg, rgba(122, 20, 38, 0.55), rgba(18, 55, 42, 0.55));
+  color: var(--warm-white);
+  text-decoration: none;
+}
+
+a.preview-index__item:hover,
+a.preview-index__item:focus-visible {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.35);
+}
+
+.preview-index__item--missing {
+  border-style: dashed;
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.preview-index__day {
+  color: var(--soft-gold);
+  font-weight: 700;
+}
+
+.preview-index__ref {
+  overflow-wrap: anywhere;
+  font-size: 0.9rem;
+}
+
+.preview-index__ref.is-placeholder {
+  font-style: italic;
+  opacity: 0.8;
+}
+
+@media (min-width: 560px) {
+  .preview-index {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 900px) {
+  .preview-index {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 699px) {
   /* Keep the Nativity scene in frame on narrow screens. */
   .sky::before {

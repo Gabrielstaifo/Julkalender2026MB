@@ -1,6 +1,6 @@
 /*
- * Swedish-only UI texts, Stockholm date logic, preview handling, countdown and grid.
- * Loaded by both index.html and day.html.
+ * Swedish-only UI texts, Stockholm date logic, preview/QA handling, countdown and grid.
+ * Loaded by index.html, day.html and preview.html.
  */
 (function () {
   'use strict';
@@ -35,6 +35,10 @@
     locked: 'Låst',
     previewAll: 'Förhandsvisning: alla dagar',
     previewDay: 'Förhandsvisning: dag {day}',
+    previewQa: 'Förhandsvisning (QA): alla dagar är öppna.',
+    previewIndexTitle: 'Förhandsvisning: alla läsningar',
+    previewIndexIntro: 'Intern QA-sida för att kontrollera alla 25 läsningar. Länkarna öppnar dagarna även innan de är öppna för besökare.',
+    previewMissing: 'saknas',
     rehearsalNotice: 'Testversion för kollegor: luckorna öppnas 23–30 november.',
     backHome: 'Till startsidan',
     previous: 'Föregående dag',
@@ -193,8 +197,18 @@
 
   var preview = readPreview();
 
+  // Hidden QA flag from preview.html: bypass the rehearsal and open all 25 days.
+  function readQa() {
+    return new URLSearchParams(window.location.search).get('qa') === '1';
+  }
+
+  var qa = readQa();
+
   // Rehearsal state follows the real Stockholm date, so it can advance at midnight.
   function computeState(today, previewValue) {
+    if (qa) {
+      return { mode: 'real', total: TOTAL_DAYS, unlockedThrough: TOTAL_DAYS, todayDay: null };
+    }
     var elapsed = simulationDay(today);
     var mode = 'real';
     if (rehearsalStart) {
@@ -245,13 +259,14 @@
     return day === state.todayDay;
   }
 
-  // Keep preview and simulate flags when navigating between the two pages.
+  // Keep preview, simulate and QA flags when navigating between pages.
   function extraQuery() {
     var parts = [];
     if (preview !== null) {
       parts.push('preview=' + encodeURIComponent(preview === 'all' ? 'all' : String(preview)));
     }
     if (simulateParam) parts.push('simulate=' + encodeURIComponent(simulateParam));
+    if (qa) parts.push('qa=1');
     return parts.join('&');
   }
 
@@ -291,6 +306,11 @@
   function initPreviewNotice() {
     var notice = document.getElementById('preview-notice');
     if (!notice) return;
+    if (qa) {
+      notice.textContent = t('previewQa');
+      notice.hidden = false;
+      return;
+    }
     if (preview !== null) {
       var key = preview === 'all' ? 'previewAll' : 'previewDay';
       notice.textContent = t(key, { day: displayDay(preview) });
